@@ -5,6 +5,7 @@ toggl - Unattended Programming Test
 You can find the endpoints at - internal\signatures\api
 
 Had some doubts about:
+- when receiving the sign request, should i get a testID so it was easier to map the answers to the tests?
 - what to do with the jwt if i should use it all or just some of it. Ended using just an "userid" :)
 - The questions that were sent on the sign. It seemed that they werent relevan to the generation of the sign hash nor to be returned so i accepted an array of questions and "discarded" it.
 - If they were to be used i probably would have created an array of QuestionAnswer to map easily the answer of each question.
