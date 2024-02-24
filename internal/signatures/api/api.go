@@ -23,8 +23,8 @@ func NewSignaturesAPI(sLogger slog.Logger, service service.SignaturesService) Si
 }
 
 func (s Signatures) Handlers(mux *http.ServeMux) {
-	mux.HandleFunc(fmt.Sprintf("%s /signatures/sign", http.MethodPost), s.postSign)
-	mux.HandleFunc(fmt.Sprintf("%s /signatures/verify", http.MethodPost), s.postVerify)
+	mux.HandleFunc(fmt.Sprintf("%s /test/sign", http.MethodPost), s.postSign)
+	mux.HandleFunc(fmt.Sprintf("%s /signature/verify", http.MethodPost), s.postVerify)
 }
 
 func (s Signatures) postSign(w http.ResponseWriter, r *http.Request) {
